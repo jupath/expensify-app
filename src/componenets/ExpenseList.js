@@ -4,9 +4,6 @@ import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = (props) => {
-
-  console.log(props.expenses)
-
   return (
     <div>
     <h1>ExpenseList</h1>
@@ -22,8 +19,6 @@ export const ExpenseList = (props) => {
 };
 
 const mapStateToProps = (state) => {
-
-  console.log(state)
   return {
     expenses: selectExpenses(state.expenses, state.filters)
   }
